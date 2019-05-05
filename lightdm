@@ -1,0 +1,4 @@
+[greeter]
+background=/usr/share/pixmaps/wallpaper.jpg
+hide-user-image=true
+indicators=""

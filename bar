@@ -1,0 +1,41 @@
+general
+{
+    colors = false
+    interval = 5
+}
+
+order += "ethernet _first_"
+order += "wireless _first_"
+order += "battery 0"
+order += "volume master"
+order += "tztime local"
+
+tztime local
+{
+    format = "%-I:%M%p "
+}
+
+volume master
+{
+    format = "Volume: %volume"
+    format_muted = "Volume: Muted"
+    device = "pulse:0"
+}
+
+battery 0
+{
+    integer_battery_capacity = true
+    format = "Battery: %percentage"
+}
+
+wireless _first_
+{
+    format_up = "WiFi: %essid"
+    format_down = ""
+}
+
+ethernet _first_
+{
+    format_up = "Ethernet"
+    format_down = ""
+}
