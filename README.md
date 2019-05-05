@@ -12,7 +12,7 @@ My personal collection of dotfiles. While the files have only been fully tested 
 * **Terminal:** XTerm
 * **Window Manager:** i3-gaps
 
-Some additional utilities are required to get full functionality. This includes `Compton`, `feh`, `Redshift`.
+Some additional utilities are required to get full functionality. This includes `Compton`, `feh`, and `Redshift`.
 
 ## Setup
 
