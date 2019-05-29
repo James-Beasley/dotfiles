@@ -2,12 +2,6 @@
 set $mod Mod4
 
 # Colors #
-set $purple #C678DD
-set $red    #E06C75
-set $yellow #E5C07B
-set $green  #98C379
-set $blue   #61AFEF
-set $teal   #56B6C2
 set $gray   #5C6370
 set $dark   #282C34
 set $light  #ABB2BF
