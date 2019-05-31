@@ -26,6 +26,10 @@ focus_wrapping no
 gaps inner 70
 gaps outer 0
 
+# Floating Windows #
+floating_modifier $mod
+bindsym $mod+w floating toggle
+
 # Default Mode #
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+t exec xterm -tn xterm-256color
