@@ -35,15 +35,15 @@
 
 XTerm.vt100.faceName: Hack:size=10
 
-rofi.width: 100
-rofi.padding: 450
-rofi.lines: 3
-rofi.border-width: 0
-rofi.font: Hack 20
+rofi.width: 500
+rofi.lines: 10
+rofi.bw: 2
+rofi.font: Hack 14
 rofi.hide-scrollbar: True
+rofi.separator-style: solid
 
 rofi.color-normal: #00000000, #ABB2BF, #00000000, #00000000, #ABB2BF
 rofi.color-urgent: #00000000, #ABB2BF, #00000000, #00000000, #ABB2BF
 rofi.color-active: #00000000, #ABB2BF, #00000000, #00000000, #ABB2BF
 
-rofi.color-window: #AA282C34, #00000000, #00000000
+rofi.color-window: #282C34, #ABB2BF, #ABB2BF
