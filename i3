@@ -14,8 +14,7 @@ set $w4 4
 
 # Startup Programs #
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id compton -f -I 0.07 -O 0.07
-exec --no-startup-id feh --bg-scale /usr/share/pixmaps/wallpaper.jpg --no-fehbg
+exec --no-startup-id compton
 exec --no-startup-id redshift -l 42:-71
 
 # Settings #
@@ -28,13 +27,14 @@ gaps outer 0
 
 # Floating Windows #
 floating_modifier $mod
-bindsym $mod+w floating toggle
+bindsym $mod+e floating toggle
 
 # Default Mode #
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show drun -drun-match-fields name
 bindsym $mod+t exec xterm -tn xterm-256color
 bindsym $mod+x exec i3lock -c 282C34 -u
 
+bindsym $mod+b bar mode toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+q kill
 bindsym $mod+s split toggle
@@ -49,15 +49,6 @@ bindsym $mod+y workspace $w1
 bindsym $mod+u workspace $w2
 bindsym $mod+i workspace $w3
 bindsym $mod+o workspace $w4
-
-# Backlight Mode #
-bindsym $mod+b mode "backlight"
-mode "backlight"
-{
-    bindsym j exec xbacklight -inc 10
-    bindsym k exec xbacklight -dec 10
-    bindsym Escape mode "default"
-}
 
 # Gaps Mode #
 bindsym $mod+g mode "gaps"
@@ -107,6 +98,17 @@ mode "volume"
     bindsym Escape mode "default"
 }
 
+# Workspace Mode #
+bindsym $mod+w mode "workspace"
+mode "workspace"
+{
+    bindsym h move workspace to output left
+    bindsym j move workspace to output down
+    bindsym k move workspace to output up
+    bindsym l move workspace to output right
+    bindsym Escape mode "default"
+}
+
 # Appearance #
 for_window[class="^.*"] border pixel 3
 
@@ -117,6 +119,8 @@ client.unfocused        $gray  $gray  $gray  $gray  $gray
 # Bar #
 bar
 {
+
+    modifier none
     status_command i3status --config ~/.config/i3/bar
     position top
     font pango:Hack 10
